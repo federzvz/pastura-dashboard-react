@@ -5,7 +5,7 @@ const PasturasList = (props) => {
     return (
     <List {...props}>
         <Datagrid>
-            <TextField source="id" />
+            {/* <TextField source="id" />
             <TextField source="Familia" />
             <TextField source="Especie" />
             <TextField source="TipoVegetativo" />
@@ -23,7 +23,7 @@ const PasturasList = (props) => {
             <TextField source="Apice" />
             <TextField source="NervaduraCentralMarcada" />
             <TextField source="Observaciones" />
-            <TextField source="Pelos" />
+            <TextField source="Pelos" /> */}
             <TextField source="UbicacionPelos" />
             <TextField source="Observacion" />
             <TextField source="ObservacionesGenerales" />
