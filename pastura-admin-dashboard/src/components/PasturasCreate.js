@@ -7,6 +7,7 @@ import {
   SelectInput,
   NumberInput,
 } from "react-admin";
+import { DragAndDrop } from './DragAndDrop.tsx';
 
 const PasturasCreate = (props) => {
   return (
@@ -23,6 +24,7 @@ const PasturasCreate = (props) => {
               { id: "1", name: "No" },
             ]}
           />
+          <DragAndDrop></DragAndDrop>
         </FormTab>
         <FormTab label="Macollo">
           <TextInput source="Mocollo1" />
@@ -60,6 +62,7 @@ const PasturasCreate = (props) => {
           <TextInput source="CicloProductivo" />
           <TextInput source="TipoProductivo" />
           <TextInput source="TipoCampo" />
+          
         </FormTab>
       </TabbedForm>
     </Create>
