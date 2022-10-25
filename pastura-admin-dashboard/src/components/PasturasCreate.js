@@ -5,6 +5,7 @@ import {
   TextInput,
   FormTab,
   SelectInput,
+  NumberInput,
 } from "react-admin";
 
 const PasturasCreate = (props) => {
