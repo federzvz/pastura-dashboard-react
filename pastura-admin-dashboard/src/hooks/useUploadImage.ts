@@ -23,11 +23,11 @@ export const useUploadImage = () => {
 
     useEffect(() => {
       let timeout: NodeJS.Timeout;
-      if(urlImage){
+      /*if(urlImage){
         timeout = setTimeout(()=> {
           setUrlImage('')
         }, 5000)
-      }
+      }*/
 
       return () => {
        clearTimeout(timeout);

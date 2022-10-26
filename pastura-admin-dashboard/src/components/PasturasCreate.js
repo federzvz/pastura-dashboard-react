@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Create,
   TabbedForm,
   TextInput,
   FormTab,
   SelectInput,
-  NumberInput,
 } from "react-admin";
 import { DragAndDrop } from './DragAndDrop.tsx';
+import { useState } from "react";
+import { useFormContext } from "react-hook-form";
 
 const PasturasCreate = (props) => {
+  const [urlImageParent, setUrlImageParent] = useState("NoImage");
+
+  const WeeklyButton = () => {
+    const { setValue } = useFormContext();
+    setValue("Imagen", urlImageParent);
+  };
+
+  useEffect(() => {
+    console.log("urlImageParent", urlImageParent);
+  }
+  , [urlImageParent]);
+
   return (
     <Create title="Crear Pastura" {...props}>
-      <TabbedForm sx={{ bgcolor: "background.paper", borderRadius: 1 }}>
+      <TabbedForm sx={{ bgcolor: "background.paper", borderRadius: 1 }} onClick={WeeklyButton}>
         <FormTab label="Generalidades">
           <TextInput source="Familia" />
           <TextInput source="Especie" />
@@ -24,7 +37,10 @@ const PasturasCreate = (props) => {
               { id: "1", name: "No" },
             ]}
           />
-          <DragAndDrop></DragAndDrop>
+          <DragAndDrop setUrlImageParent={setUrlImageParent}>
+          </DragAndDrop>
+         <TextInput source="Imagen"></TextInput>
+         <WeeklyButton />
         </FormTab>
         <FormTab label="Macollo">
           <TextInput source="Mocollo1" />
@@ -62,7 +78,6 @@ const PasturasCreate = (props) => {
           <TextInput source="CicloProductivo" />
           <TextInput source="TipoProductivo" />
           <TextInput source="TipoCampo" />
-          
         </FormTab>
       </TabbedForm>
     </Create>

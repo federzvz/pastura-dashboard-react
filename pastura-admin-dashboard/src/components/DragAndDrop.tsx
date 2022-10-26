@@ -6,13 +6,15 @@ import { BoxDragAndDrop } from './BoxDragAndDrop.tsx';
 import { ImageSelected } from './ImageSelected.tsx';
 import { Message } from './Message.tsx';
 
-export const DragAndDrop = () => {
+export const DragAndDrop = (props) => {
 
     const { urlImage, handleChange, images, ...rest } = useUploadImage();
+    const setUrlImageParent = props.setUrlImageParent;
 
     return (
         <>
-            <Message urlImage={urlImage} />
+            {setUrlImageParent(urlImage)}
+            {/*<Message urlImage={urlImage} />*/}
             <ImageUploading multiple={false} value={images} onChange={handleChange} maxNumber={1}>
                 {({
                     imageList,
