@@ -57,11 +57,12 @@ const PasturasEdit = (props) => {
           <TextInput source="Familia" />
           <TextInput source="Especie" />
           <TextInput source="TipoVegetativo" />
-          <SelectInput
+          {console.log(props)}
+          <SelectInput 
             source="RizomaEngrosado"
             choices={[
-              { id: "0", name: "Si" },
-              { id: "1", name: "No" },
+              { id: "true", name: "Si" },
+              { id: "false", name: "No" },
             ]}
           />
         </FormTab>
@@ -84,8 +85,8 @@ const PasturasEdit = (props) => {
           <SelectInput
             source="NervaduraCentralMarcada"
             choices={[
-              { id: "0", name: "Si" },
-              { id: "1", name: "No" },
+              { id: "true", name: "Si" },
+              { id: "false", name: "No" },
             ]}
           />
           <TextInput source="Observaciones" />

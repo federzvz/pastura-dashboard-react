@@ -19,13 +19,13 @@ const PasturasCreate = (props) => {
   };
 
   useEffect(() => {
-    console.log("urlImageParent", urlImageParent);
+
   }
   , [urlImageParent]);
 
   return (
     <Create title="Crear Pastura" {...props}>
-      <TabbedForm sx={{ bgcolor: "background.paper", borderRadius: 1 }} onClick={WeeklyButton}>
+      <TabbedForm sx={{ bgcolor: "background.paper", borderRadius: 1 }}>
         <FormTab label="Generalidades">
           <TextInput source="Familia" />
           <TextInput source="Especie" />
