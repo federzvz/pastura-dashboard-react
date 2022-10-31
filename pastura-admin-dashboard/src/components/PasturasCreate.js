@@ -5,7 +5,9 @@ import {
   TextInput,
   FormTab,
   SelectInput,
+  required
 } from "react-admin";
+// import { useInput, required } from 'react-admin';
 import { DragAndDrop } from './DragAndDrop.tsx';
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -14,6 +16,7 @@ const PasturasCreate = (props) => {
   const [urlImageParent, setUrlImageParent] = useState("NoImage");
 
   const WeeklyButton = () => {
+    // e.preventDefault();
     const { setValue } = useFormContext();
     setValue("Imagen", urlImageParent);
   };
@@ -25,7 +28,7 @@ const PasturasCreate = (props) => {
 
   return (
     <Create title="Crear Pastura" {...props}>
-      <TabbedForm sx={{ bgcolor: "background.paper", borderRadius: 1 }}>
+      <TabbedForm id="p" sx={{ bgcolor: "background.paper", borderRadius: 1 }}>
         <FormTab label="Generalidades">
           <TextInput source="Familia" />
           <TextInput source="Especie" />
@@ -39,12 +42,12 @@ const PasturasCreate = (props) => {
           />
           <DragAndDrop setUrlImageParent={setUrlImageParent}>
           </DragAndDrop>
-         <TextInput source="Imagen"></TextInput>
-         <WeeklyButton />
+         <TextInput source="Imagen" validate={[required()]}></TextInput>
+         <WeeklyButton/>
         </FormTab>
-        <FormTab label="Macollo">
-          <TextInput source="Mocollo1" />
-          <TextInput source="Mocollo2" />
+        <FormTab label="Macollo" >
+          <TextInput source="Mocollo1" validate={[required()]}/>
+          <TextInput source="Mocollo2"/>
         </FormTab>
         <FormTab label="Ligula">
           <TextInput source="ConsistenciaLigula" />
