@@ -8,6 +8,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { StoreAdmin } from './StoreAdmin';
 
 
 
@@ -17,8 +18,8 @@ root.render(
     <BrowserRouter>
 
       <Routes>
-        <Route path="/*" element={<App />} />
-
+        <Route path="/admin/*" element={<App />} />
+        <Route path="/*" element={<StoreAdmin />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
