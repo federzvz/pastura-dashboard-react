@@ -2,6 +2,7 @@
 import { Admin, Resource } from 'react-admin';
 import PasturasList2 from "./components/PasturasList2";
 import jsonServerProvider from "ra-data-json-server";
+import PasturasShow from "./components/PasturaShow";
 
 const dataProvider = jsonServerProvider("http://localhost:1234/pasturas");
 
@@ -10,7 +11,7 @@ export const StoreAdmin = () => (
         <Resource 
         name="pasturas" 
         list={PasturasList2}
-        
+        show={PasturasShow}
         />
     </Admin>
 );
