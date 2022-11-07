@@ -9,6 +9,7 @@ import {
     // FilterForm,
     // ListBase,
     // Pagination,
+    ImageField, 
     List, 
     Datagrid, 
     TextField, 
@@ -56,12 +57,15 @@ const PasturasList = (props) => {
             {/* <TextField source="id" /> */}
             {/* <TextField source="Familia" /> */}
             {/* <TextField source="Especie" /> */}
+            <ImageField source="Imagen" title="Imagen" 
+                sx={{ '& img': { maxWidth: 100, maxHeight: 100, objectFit: 'contain', borderRadius: '50%' } }}
+            />
             <TextField source="TipoVegetativo" />
-            <TextField source="RizomaEngrosado" />
+            {/* <TextField source="RizomaEngrosado" /> */}
             <TextField source="Mocollo1" />
             <TextField source="Mocollo2" />
             <TextField source="ConsistenciaLigula" />
-            <TextField source="FormaLigula" />
+            {/* <TextField source="FormaLigula" /> */}
             {/* <TextField source="Tamano" /> */}
             {/* <TextField source="OtrasCaracteristicasLigula" /> */}
             {/* <TextField source="ColorLigula" /> */}
@@ -69,7 +73,7 @@ const PasturasList = (props) => {
             {/* <TextField source="Canaliculada" /> */}
             <TextField source="TipoLamina" />
             <TextField source="Apice" />
-            <TextField source="NervaduraCentralMarcada" />
+            {/* <TextField source="NervaduraCentralMarcada" /> */}
             {/* <TextField source="Observaciones" /> */}
             <TextField source="Pelos" />
             {/* <TextField source="UbicacionPelos" /> */}
