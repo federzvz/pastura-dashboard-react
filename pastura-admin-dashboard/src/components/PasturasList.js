@@ -1,9 +1,10 @@
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, ImageField, ShowButton } from 'react-admin';
+import { PostFilterSidebar } from './PostFilterSidebar';
 
 const PasturasList = (props) => {
     return (
-    <List {...props}>
+    <List aside={<PostFilterSidebar />} {...props}>
         <Datagrid>
             {/* <TextField source="id" />
             <TextField source="Familia" />
@@ -24,6 +25,9 @@ const PasturasList = (props) => {
             <TextField source="NervaduraCentralMarcada" />
             <TextField source="Observaciones" />
             <TextField source="Pelos" /> */}
+            <ImageField source="Imagen" title="Imagen" 
+                sx={{ '& img': { maxWidth: 100, maxHeight: 100, objectFit: 'contain', borderRadius: '50%' } }}
+            />
             <TextField source="UbicacionPelos" />
             <TextField source="Observacion" />
             <TextField source="ObservacionesGenerales" />
@@ -33,6 +37,7 @@ const PasturasList = (props) => {
             <TextField source="TipoCampo" />
             <EditButton />
             <DeleteButton />
+            <ShowButton/>
         </Datagrid>
     </List>
     )
