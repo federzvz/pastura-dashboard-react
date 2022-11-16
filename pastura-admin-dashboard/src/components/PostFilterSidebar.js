@@ -25,6 +25,7 @@ export const PostFilterSidebar = () => (
             </FilterList>
             <FilterList label="Macollo 1" icon={<SearchIcon />}>
                 <FilterListItem label="Semi rollizo" value={{ Mocollo1: 'Semi rollizo' }} />
+                <FilterListItem label="Semi Comprimido" value={{ Mocollo1: 'Semi Comprimido' }} />
                 <FilterListItem label="Comprimido" value={{ Mocollo1: 'Comprimido' }} />
                 <FilterListItem label="Semi Rolliza" value={{ Mocollo1: 'Semi Rolliza' }} />
                 <FilterListItem label="Rollizo" value={{ Mocollo1: 'Rollizo' }} />

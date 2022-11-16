@@ -8,6 +8,6 @@ export const MyMenu = () => (
     <Menu>
         {/* <Menu.DashboardItem /> */}
         <Menu.Item to="/pasturas" primaryText="Pasturas" leftIcon={<BookIcon />}/>
-        <Menu.Item to="/admin/login" primaryText="Administrador" leftIcon={<PeopleIcon />}/>
+        <Menu.Item to="/admin/" primaryText="Administrador" leftIcon={<PeopleIcon />}/>
     </Menu>
 );

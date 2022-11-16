@@ -12,6 +12,7 @@ import authProvider from './components/authProvider.js';
 import MyLoginPage from "./components/MyLoginPage"; 
 import { MyMenu } from './MyMenu';
 import { MyAppBar } from './MyAppBar';
+import PasturasShow from "./components/PasturaShow";
 
 const dataProvider = jsonServerProvider("http://localhost:1234/pasturas");
 
@@ -24,6 +25,7 @@ const App = () => (
       list={PasturasList}
       create={PasturasCreate}
       edit={PasturasEdit}
+      show={PasturasShow}
     />
     {/* <Resource name="pasturas" list={PasturasList} /> */}
   </Admin>
