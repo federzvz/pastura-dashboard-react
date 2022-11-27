@@ -23,6 +23,9 @@ const authProvider = {
     },
     logout: () => {
         console.log("LOGOUT");
+        // console.log(localStorage.getItem('auth')['username']);
+        // var user = JSON.parse(localStorage.getItem('auth'));
+        // console.log(user.username)
         localStorage.removeItem('auth');
         return Promise.resolve();
     },
@@ -39,8 +42,13 @@ const authProvider = {
     },
     getIdentity: () =>
         Promise.resolve({
+            // user: JSON.parse(localStorage.getItem('auth')),
+
             id: 'user',
-            fullName: 'John Doe',
+            // fullName: 'John Doe',
+            fullName: JSON.parse(localStorage.getItem('auth')).username,
+            // fullName: 'username',
+            // fullName: localStorage.getItem('username'),
         }),
     getPermissions: () => Promise.resolve(''),
 };

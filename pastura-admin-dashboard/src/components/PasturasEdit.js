@@ -12,7 +12,7 @@ import { Typography, Box } from '@mui/material';
 
 const PasturasEdit = (props) => {
   return (
-    <Edit title="Editar Pastura" {...props}>
+    <Edit title="Editar Pastura" {...props} redirect="list">
       {/* <SimpleForm>
         <TextInput disabled source="id" />
         <TextInput source="Familia" />

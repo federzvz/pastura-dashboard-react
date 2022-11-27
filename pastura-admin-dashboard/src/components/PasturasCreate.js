@@ -45,13 +45,13 @@ const PasturasCreate = (props) => {
   , [urlImageParent]);
 
   return (
-    <Create title="Crear Pastura" {...props}>
+    <Create title="Crear Pastura" {...props} redirect="list" >
       <TabbedForm id="p" sx={{ bgcolor: "background.paper", borderRadius: 1 }}>
         <FormTab label="Generalidades">
 
-          <Typography variant="h6" gutterBottom>
+          {/* <Typography variant="h6" gutterBottom>
             Generalidades
-          </Typography>
+          </Typography> */}
           <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>
             <Box flex={1} mr={{ xs: 0, sm: '0.5em' }}>
               <TextInput source="Especie" fullWidth multiline/>{/* multiline */}
