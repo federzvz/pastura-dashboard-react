@@ -67,7 +67,7 @@ const MyLoginPage = ({ theme }) => {
                         <div className="message" style={{alignSelf: 'center'}}>
                             {/* <div><input type="checkbox" /> Remember ME</div> */}
                             <Menu>
-                                <Menu.Item to="/pasturas" primaryText="Ingresar como invitado" style={{color: 'white'}}/>
+                                <Menu.Item to="/pasturas" primaryText="Ingresar como invitado" style={{color: 'white', paddingLeft: 0}}/>
                             </Menu>
                         </div>
                     </form>

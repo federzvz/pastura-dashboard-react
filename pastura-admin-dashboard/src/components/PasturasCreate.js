@@ -71,8 +71,8 @@ const PasturasCreate = (props) => {
               <SelectInput
                 source="RizomaEngrosado"
                 choices={[
-                  { id: "0", name: "Si" },
-                  { id: "1", name: "No" },
+                  { id: "true", name: "Si" },
+                  { id: "false", name: "No" },
                 ]}
                 fullWidth/>
             </Box>
@@ -235,8 +235,8 @@ const PasturasCreate = (props) => {
           <SelectInput
             source="NervaduraCentralMarcada"
             choices={[
-              { id: "0", name: "Si" },
-              { id: "1", name: "No" },
+              { id: "true", name: "Si" },
+              { id: "false", name: "No" },
             ]}
             fullWidth/>
           <TextInput source="Observaciones" fullWidth multiline/>

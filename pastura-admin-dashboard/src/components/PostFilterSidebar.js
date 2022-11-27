@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CategoryIcon from '@mui/icons-material/LocalOffer';
 
 export const PostFilterSidebar = () => (
-    <Card sx={{ order: -1, mr: 2, mt: 9, width: 450 }}>
+    <Card sx={{ order: -1, mr: 2, mt: 9, width: '20%', minWidth: '300px'}}>
         <CardContent>
             {/* <SavedQueriesList />
             <FilterLiveSearch /> */}
